@@ -1,15 +1,23 @@
-<script setup>
-import { ref, computed } from 'vue'
-
-</script>
-
 <template>
-  <div>
-    test
-  </div>
-
+  <v-app>
+    <v-main>
+      <HelloWorld/>
+    </v-main>
+  </v-app>
 </template>
 
-<style >
+<script>
+import HelloWorld from './components/HelloWorld.vue'
 
-</style>
+export default {
+  name: 'App',
+
+  components: {
+    HelloWorld,
+  },
+
+  data: () => ({
+    //
+  }),
+}
+</script>
