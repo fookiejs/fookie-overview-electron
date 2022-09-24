@@ -1,5 +1,5 @@
 <template lang="pug">
-div home
+div login
 </template>
 
 <script setup>
