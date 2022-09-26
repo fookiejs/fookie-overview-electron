@@ -1,5 +1,5 @@
 <template lang="pug">
-div login
+div(class="text-3xl") login
 </template>
 
 <script setup>
