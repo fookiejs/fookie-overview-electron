@@ -1,5 +1,6 @@
 <template lang="pug">
-div home
+v-main(app)
+    v-container test
 </template>
 
 <script setup>
