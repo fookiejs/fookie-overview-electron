@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  server:
+    image: umudik/fookie-cache:latest
+    env_file: ".env"
+    ports:
+      - 2626:2626
