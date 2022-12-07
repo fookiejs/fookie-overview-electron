@@ -1,19 +1,21 @@
 {
-  "name": "fookie-overview",
+  "name": "vuetify-project",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^2.0.26",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "@mdi/font": "7.0.96",
+    "roboto-fontface": "*",
+    "vue": "^3.2.38",
+    "vuetify": "^3.0.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.2.0",
-    "vite": "^3.2.4"
+    "@vitejs/plugin-vue": "^3.0.3",
+    "vite-plugin-vuetify": "^1.0.0-alpha.12",
+    "vite": "^3.1.9"
   }
 }
