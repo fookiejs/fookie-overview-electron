@@ -6,9 +6,20 @@ import vuetify from 'vite-plugin-vuetify'
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
+// PUG
+import vuePugPlugin from 'vue-pug-plugin'
+
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        preprocessOptions: {
+          plugins: [
+            vuePugPlugin
+          ]
+        }
+      }
+    }),
     vuetify({
       autoImport: true,
     }),

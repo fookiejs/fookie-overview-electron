@@ -10,7 +10,7 @@ export const useStore = defineStore("counter", {
                 setting: [],
                 mixin: [],
             },
-            url: "http://localhost:2626",
+            url: "https://b58j60bwy8.execute-api.eu-central-1.amazonaws.com/dev/",
             token: "umudik",
         };
     },
