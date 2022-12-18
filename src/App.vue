@@ -37,7 +37,7 @@ v-app(app)
           About(:model="model")
         v-window-item(value="list")
           List(:model="model")
-  v-footer(app)
+  v-footer()
     div(class="px-4 py-2 text-center w-100")
       span {{ new Date().getFullYear() }} 
         strong FookieJS Overview

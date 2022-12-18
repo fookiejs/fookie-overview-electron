@@ -34,6 +34,8 @@ v-table(v-else)
           strong [Function]
         div(v-else-if="model.schema[field].type === 'object'")
           div() {{entity[field]}}    
+        div(v-else-if="model.schema[field].type === 'boolean'")
+          v-chip(:color="entity[field] ? 'green' : 'red'") {{ entity[field] ? true : false }}    
         div(v-else)  {{entity[field]}}     
 </template>
 
