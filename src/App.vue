@@ -1,7 +1,9 @@
 <script setup>
 import { useStore } from "@/store/index.js";
 import List from "@/components/model/list.vue";
+import Header from "@/components/layout/header.vue";
 import About from "@/components/model/about.vue";
+import Footer from "@/components/layout/footer.vue";
 import { onMounted, ref, watch } from "vue";
 import lodash from "lodash";
 const store = useStore();
@@ -27,6 +29,7 @@ watch(model_name, async function (newValue, oldValue) {
 
 <template lang="pug">
 v-app(app)
+  Header
   v-main(app)
     v-container(app)
       v-tabs(v-model="model_name") 
@@ -39,10 +42,7 @@ v-app(app)
           About(:model="model")
         v-window-item(value="list")
           List(:model="model", :key="model_name")
-  v-footer
-    .px-4.py-2.text-center.w-100
-      span {{ new Date().getFullYear() }}
-        strong FookieJS Overview
+  Footer
 </template>
 
 
