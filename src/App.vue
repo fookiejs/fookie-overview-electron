@@ -16,6 +16,8 @@ onMounted(async () => {
     method: "read",
   });
   models.value = res.data;
+  model.value = models.value[0];
+  model_name.value = model.value.name;
 });
 
 watch(model_name, async function (newValue, oldValue) {
@@ -27,19 +29,19 @@ watch(model_name, async function (newValue, oldValue) {
 v-app(app)
   v-main(app)
     v-container(app)
-      v-tabs(v-model="model_name")   
-        v-tab(v-for='m of models' :value="m.name") {{m.name }}
-      v-tabs(v-if="model" v-model="type")   
+      v-tabs(v-model="model_name") 
+        v-tab(v-for="m of models", :value="m.name") {{ m.name }}
+      v-tabs(v-if="model", v-model="type") 
         v-tab(value="about") About
         v-tab(value="list") List
-      v-window(v-if="model" v-model="type" continuous)
+      v-window(v-if="model", v-model="type")
         v-window-item(value="about")
           About(:model="model")
         v-window-item(value="list")
-          List(:model="model")
-  v-footer()
-    div(class="px-4 py-2 text-center w-100")
-      span {{ new Date().getFullYear() }} 
+          List(:model="model", :key="model_name")
+  v-footer
+    .px-4.py-2.text-center.w-100
+      span {{ new Date().getFullYear() }}
         strong FookieJS Overview
 </template>
 
